@@ -65,7 +65,7 @@
                         <td th:text="${u.sexo.desc}">F</td>
                         <td>
                             <a class="btn btn-info" href="/intro-spring-thymeleaf/usuario/update/1">Editar</a>
-                            <a class="btn btn-danger" href="/intro-spring-thymeleaf/usuario/delete/1">Excluir</a>
+                            <a class="btn btn-danger" th:href="@{/usuario/delete/{id} (id=${u.id})}" th:text="Deletar">Excluir</a>
                         </td>
                     </tr>
                 </tbody>
