@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Cadastro de Usuário</title>
@@ -59,34 +59,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Ana Maria Junqueira Silva</td>
-                        <td>01/02/1998</td>
-                        <td>F</td>
+                    <tr th:each="u : ${usuarios}">
+                        <td th:text="${u.id}">1</td>
+                        <td th:text="${u.nome}">Ana Maria Junqueira Silva</td>
+                        <td th:text="${u.dtNascimento}">01/02/1998</td>
+                        <td th:text="${u.sexo.desc}">F</td>
                         <td>
                             <a class="btn btn-info" href="/intro-spring-thymeleaf/usuario/update/1">Editar</a>
                             <a class="btn btn-danger" href="/intro-spring-thymeleaf/usuario/delete/1">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Pedro Ribeiro Castro</td>
-                        <td>23/01/1996</td>
-                        <td>M</td>
-                        <td>
-                            <a class="btn btn-info" href="/intro-spring-thymeleaf/usuario/update/2">Editar</a>
-                            <a class="btn btn-danger" href="/intro-spring-thymeleaf/usuario/delete/2">Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Pietra da Silva Gomes</td>
-                        <td>23/07/2000</td>
-                        <td>F</td>
-                        <td>
-                            <a class="btn btn-info" href="/intro-spring-thymeleaf/usuario/update/3">Editar</a>
-                            <a class="btn btn-danger" href="/intro-spring-thymeleaf/usuario/delete/3">Excluir</a>
                         </td>
                     </tr>
                 </tbody>
