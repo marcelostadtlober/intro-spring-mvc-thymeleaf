@@ -19,8 +19,8 @@
         <h1>Cadastro de Usuários</h1>
         <hr>
         <div>
-            <form th:action="@{/usuario/save}" th:object="${usuario}" method="post">
-                <input type="hidden" id="id" name="id" value=""/>
+            <form th:action="${usuario.id == null} ? @{/usuario/save} : @{/usuario/update}" th:object="${usuario}" method="post">
+                <input type="hidden" th:field="*{id}"/>
                 <div class="form-group">
                     <label th:for="nome">Nome: </label>
                     <input type="text" class="form-control" id="nome" th:field="*{nome}"/>
