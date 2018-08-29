@@ -16,7 +16,7 @@
     </div>
 
     <div class="container">
-        <h1>Cadastro de Usuários</h1>
+        <h1 th:text="#{titulo.cadastro}"></h1>
         <hr>
         <div>
             <form th:action="${usuario.id == null} ? @{/usuario/save} : @{/usuario/update}" th:object="${usuario}" method="post">
