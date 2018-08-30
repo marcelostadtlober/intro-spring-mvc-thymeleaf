@@ -6,14 +6,6 @@
     <link type="text/css" rel="stylesheet" href="/intro-spring-thymeleaf/static/css/bootstrap.min.css"/>
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar navbar-inverse">
-            <div class="navbar-form navbar-left">
-                <a class="btn btn-default" href="/intro-spring-thymeleaf/usuario/todos">Home</a>
-                <a class="btn btn-default" href="/intro-spring-thymeleaf/usuario/cadastro">Novo Usuário</a>
-            </div>
-        </nav>
-    </div>
 
     <div class="container">
         <h1 th:text="#{titulo.cadastro}"></h1>
@@ -49,8 +41,5 @@
         </div>
     </div>
 
-    <footer class="footer" th:insert="fragmentos/footer">
-        <span>O rodapé será inserido aqui!</span>
-    </footer>
 </body>
 </html>
